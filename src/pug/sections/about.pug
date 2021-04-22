@@ -1,0 +1,38 @@
+mixin about-tabs__item(pic)
+  //begin about-tabs__item
+  div(class="about-tabs__item about-tabs__item--" + pic + "")
+    .about-tabs__item-inn
+      .about-tabs__item-text
+        p Продуманные планировки квартир составляются с учетом количества членов семьи, их предпочтений и потребностей.
+        p Благодаря концепции «Разумные метры», каждый квадратный метр станет функциональным: больше никаких неиспользуемых тупиков, темных коридоров и неэффективных зон.
+        button.about-tabs__btn.btn Выбрать планировку
+      .about-tabs__item-pic
+        img(src="assets/img/about-" + pic + ".jpg" alt="picture")
+  //end about-tabs__item
+
+//begin about
+section.about
+  .about__video
+    video(autoplay muted loop preload='auto')
+      source(type="video/mp4" src='assets/video/woodpecker.mp4')
+
+  .container.container--350
+    h2.about__title Атмосфера — это
+    //begin about__tabs
+    .about__tabs.about-tabs
+      //begin about-tabs__header
+      .about-tabs__header
+        .about-tabs__link.active(data-tab="01") Функциональность
+        .about-tabs__link(data-tab="02") Транспортная доступность
+        .about-tabs__link(data-tab="03") Инфраструктура
+        .about-tabs__link(data-tab="04") Экологичность
+      //end about-tabs__header
+      //begin about-tabs__body
+      .about-tabs__body
+        +about-tabs__item('01')
+        +about-tabs__item('02')
+        +about-tabs__item('03')
+        +about-tabs__item('04')
+      //end about-tabs__body
+    //end about__tabs
+//end about

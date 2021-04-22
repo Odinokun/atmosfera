@@ -1,0 +1,25 @@
+mixin top-slider__item(pic, title, subtitle)
+  div(class="top-slider__item" style="background-image: url('assets/img/top-" + pic + ".jpg');")
+    .container.container--350
+      h2.top-slider__title #{title}
+      span.top-slider__subtitle #{subtitle}
+
+//begin top
+.top
+  //begin top-slider
+  .top-slider#top-slider
+    +top-slider__item('01', 'Лучшая цена', 'квартира от 11 200 000 тг')
+    +top-slider__item('02', 'Комфортная атмосфера для жизни', 'цена от 280 000 ₸ за м2')
+    +top-slider__item('01', 'Лучшая цена', 'квартира от 11 200 000 тг')
+    +top-slider__item('02', 'Комфортная атмосфера для жизни', 'цена от 280 000 ₸ за м2')
+  //end top-slider
+
+  include ../sections/header
+
+  //begin top__walk
+  .top__walk.top-walk
+    .container.container--350
+      span.top-walk__text Прогулка по комплексу
+      .top-walk__btn
+  //end top__walk
+//end top

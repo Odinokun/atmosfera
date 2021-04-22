@@ -1,0 +1,33 @@
+//begin header
+header.header
+  .container.container--350
+    //begin header__menu
+    nav.header__menu.menu
+      ul.menu__list
+        li.menu__item
+          a(href="#").menu__link О комплексе
+        li.menu__item
+          a(href="#").menu__link Квартиры
+        li.menu__item
+          a(href="#").menu__link Коммерческие помещения
+        li.menu__item
+          a(href="#").menu__link Как купить
+        li.menu__item
+          a(href="#").menu__link Контакты
+    //end header__menu
+
+    //begin header__right
+    .header__right
+      a(href="tel:+77000077070").header__phone
+        .header__phone-text +7 700 007 70 70
+        .header__phone-whatsapp
+          +svg('whatsapp')
+
+      button.header__btn.btn Оставить заявку
+
+      .header__sale
+        .header__sale-icon
+          +svg('sale')
+        .header__sale-text Отдел продаж
+    //end header__right
+//end header

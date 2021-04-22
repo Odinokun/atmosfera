@@ -1,0 +1,12 @@
+// ===== main colors =====
+$brand: #4A7755;
+
+// ===== text colors =====
+$text: #141414;
+
+// ===== link colors =====
+$link: $brand;
+$link-hov: lighten($link, 25%);
+
+// ===== transition =====
+$transition: .3s ease-in-out;

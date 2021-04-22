@@ -1,0 +1,108 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 25px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//begin #MENU
+.menu {
+  margin-right: auto;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  padding-right: 32px;
+  list-style: none;
+}
+
+.menu__link {
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 23px;
+  color: #fff;
+}
+
+//end #MENU
+
+//begin #RIGHT
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone-text {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.header__phone-whatsapp {
+  flex: none;
+  margin-left: 10px;
+
+  svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header__btn {
+  flex: none;
+  margin-left: 30px;
+  min-width: 200px;
+
+  &:hover {
+    color: #fff;
+    background-color: #4a7755;
+  }
+}
+
+.header__sale {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.header__sale-icon {
+  flex: none;
+  margin-right: 8px;
+
+  svg {
+    fill: #fff;
+    width: 19px;
+    height: 16px;
+  }
+}
+
+.header__sale-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+//end #RIGHT

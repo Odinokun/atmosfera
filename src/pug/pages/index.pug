@@ -1,0 +1,18 @@
+extends ../_template
+
+block variables
+  - var title       = 'Атмосфера'
+  - var description = 'Атмосфера'
+
+block content
+  .main-wrap.no-js
+    include ../sections/aside
+
+    //begin content
+    main.main
+      include ../sections/top
+      include ../sections/about
+      include ../sections/info
+    //end content
+
+    include ../sections/scripts
