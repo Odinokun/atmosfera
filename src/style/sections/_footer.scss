@@ -1,0 +1,32 @@
+#footer-map{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.footer {
+  position: relative;
+  &::before {
+    content: '';
+    width: 50%;
+    z-index: 2;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #4A7755;
+  }
+  .container {
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+
+.footer__left{
+  min-height: 800px;
+}
