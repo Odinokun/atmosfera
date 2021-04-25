@@ -1,0 +1,147 @@
+.credit {
+  overflow: hidden;
+  background-image: url('../img/bg-credit.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .container {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+}
+
+.credit__title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 68px;
+  margin-bottom: 75px;
+  color: #141414;
+}
+
+.credit__slider {
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 5;
+    top: -120px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    border: 2px solid $brand;
+    border-radius: 50%;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $brand;
+
+      svg {
+        stroke: #fff;
+      }
+    }
+
+    svg {
+      fill: none;
+      stroke: $brand;
+      stroke-width: 2px;
+      width: 11px;
+      height: 11px;
+      transition: all .5s;
+    }
+  }
+
+  .prev {
+    right: 50px;
+
+    svg {
+      transform: translateX(1px);
+    }
+  }
+
+  .next {
+    right: 0;
+
+    svg {
+      transform: translateX(-1px);
+    }
+  }
+}
+
+.credit-slide {
+  display: flex !important;
+  flex-direction: column;
+  height: auto;
+  align-items: flex-start;
+  margin-right: 20px;
+  padding: 30px 26px;
+  background-color: #fff;
+}
+
+.credit-slide__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.37;
+  color: #141414;
+  margin-bottom: 30px;
+}
+
+.credit-slide__label {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 7px 19px;
+  margin-bottom: 27px;
+  margin-top: -14px;
+  text-align: center;
+  color: #4a7755;
+  background-color: #d5ecdb;
+}
+
+.credit-slide__list {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credit-slide__item {
+  position: relative;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.67;
+
+
+  color: #646464;
+  strong{
+    font-weight: bold;
+  }
+
+  &::before {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    border-radius: 50%;
+    background-color: $brand;
+  }
+}
+
+.credit-slide__btn {
+  margin-top: auto;
+  width: 100%;
+}
