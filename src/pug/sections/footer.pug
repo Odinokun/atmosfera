@@ -1,9 +1,26 @@
-div(style="height: 50px; background: red;")
-
 //begin footer
 .footer
   #footer-map
   .container
     .footer__left
-
+      h2.footer__title Отдел продаж
+      a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__adress г. Алматы, ул. Январская, 57
+      .footer__schedule Работаем с 09.00 до 20.00 с понедельника по субботу
+      .footer__contacts
+        a(href="tel:+77000077070").footer__phone +7 700 007 70 70
+        .footer__socials
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--whatsapp
+            +svg('whatsapp')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--inst
+            +svg('inst')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--fb
+            +svg('fb')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--youtube
+            +svg('youtube')
+      button.footer__btn.btn Оставить заявку
+      .footer__descr
+        .footer__logo
+          img(src="assets/img/logo-white.svg" alt="picture")
+        .footer__descr-text Жилой комплекс «Атмосфера» расположен в городе Алматы,<br>по улице Восьмого Апреля, 124
+      .footer__copyright © 2021 ЖК «Атмосфера». Все права защищены.
 //end footer

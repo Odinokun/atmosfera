@@ -10,6 +10,14 @@ module.exports = function() {
     fade: true
   });
 
+  $('#choice__slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: false,
+    fade: true
+  });
+
   ////////////////////DELETE
 
   $('.slick').slick({
