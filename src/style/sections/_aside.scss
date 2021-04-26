@@ -5,6 +5,11 @@
   left: 0;
   overflow: hidden;
   pointer-events: none;
+
+  @include max(767) {
+    width: 100%;
+    padding-top: 70px;
+  }
 }
 
 .aside__bg {
@@ -16,11 +21,20 @@
   transition: .5s ease-in-out;
   pointer-events: none;
   opacity: 0;
-  background-color: #000;
+  background-color: #141414;
+
+  @include max(767) {
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
 
   &.active {
     pointer-events: auto;
-    opacity: .8;
+    opacity: .6;
+
+    + .aside__desktop {
+      transform: translateX(0px);
+    }
   }
 }
 
@@ -28,6 +42,7 @@
   position: relative;
   z-index: 20;
   display: flex;
+  overflow: auto;
   flex-direction: column;
   justify-content: space-between;
   width: 320px;
@@ -38,13 +53,31 @@
   pointer-events: auto;
   background-color: #f5f5f5;
 
+  @include max(767) {
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    transform: translateX(-100%);
+    background-color: #fff;
+  }
+
   &.active {
     transform: translateX(0);
+
+    @include max(1700) {
+      transform: translateX(-320px);
+    }
+
+    @include max(767) {
+      transform: translateX(-100%);
+    }
   }
 }
 
 .aside__logo {
   width: 100%;
+  max-width: 220px;
+  margin-bottom: 20px;
 
   img {
     display: block;
@@ -53,6 +86,14 @@
 }
 
 //begin #MIDDLE
+.aside__middle {
+  @include max(767) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .aside__about {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -71,6 +112,10 @@
   letter-spacing: .1em;
   text-transform: uppercase;
   color: #969696;
+
+  @include max(767) {
+    text-align: center;
+  }
 }
 
 .aside__about-title {
@@ -78,6 +123,10 @@
   font-weight: 800;
   line-height: 33px;
   color: #141414;
+
+  @include max(767) {
+    text-align: center;
+  }
 }
 
 .aside__camera {
@@ -100,9 +149,9 @@
   border-radius: 50%;
 
   svg {
+    stroke: #4a7755;
     width: 12px;
     height: 8px;
-    stroke: #4a7755;
   }
 }
 
@@ -115,10 +164,59 @@
 }
 
 .aside__choice {
-  width: 100%;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
 //end #MIDDLE
+
+//begin #MENU
+.aside__menu {
+  display: none;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 45px;
+
+  @include max(767) {
+    display: block;
+  }
+}
+
+.aside-menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.aside-menu__item {
+  padding: 16px 0;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.aside-menu__link {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  color: #141414;
+}
+
+//end #MENU
+
+.aside__callback {
+  display: none;
+  flex: none;
+  width: 220px;
+  margin-bottom: 30px;
+
+  @include max(767) {
+    display: inline-flex;
+  }
+}
 
 
 //begin #CONTACTS
@@ -151,6 +249,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  @include max(767) {
+    justify-content: center;
+  }
 }
 
 .aside-contacts__sale-icon {
@@ -189,6 +291,10 @@
   cursor: pointer;
   pointer-events: auto;
   background-color: #f5f5f5;
+
+  @include max(767) {
+    display: none;
+  }
 }
 
 .aside__logo-sm {

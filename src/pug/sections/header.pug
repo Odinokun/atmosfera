@@ -1,19 +1,24 @@
 //begin header
 header.header
   .container.container--350
+    .header__logo
+      img(src="assets/img/logo-sm.svg" alt="logo")
+    .header__burger
+
+
     //begin header__menu
     nav.header__menu.menu
       ul.menu__list
         li.menu__item
-          a(href="#").menu__link О комплексе
+          a(href="#about").menu__link.scroll-btn О комплексе
         li.menu__item
-          a(href="#").menu__link Квартиры
+          a(href="#choice").menu__link.scroll-btn Квартиры
         li.menu__item
-          a(href="#").menu__link Коммерческие помещения
+          a(href="#target").menu__link.scroll-btn Коммерческие помещения
         li.menu__item
-          a(href="#").menu__link Как купить
+          a(href="#credit").menu__link.scroll-btn Как купить
         li.menu__item
-          a(href="#").menu__link Контакты
+          a(href="#footer").menu__link.scroll-btn Контакты
     //end header__menu
 
     //begin header__right
@@ -23,9 +28,9 @@ header.header
         .header__phone-whatsapp
           +svg('whatsapp')
 
-      button.header__btn.btn Оставить заявку
+      .header__btn.btn.popup-open(data-popup="popup-callback") Оставить заявку
 
-      .header__sale
+      .header__sale.popup-open(data-popup="popup-sale")
         .header__sale-icon
           +svg('sale')
         .header__sale-text Отдел продаж

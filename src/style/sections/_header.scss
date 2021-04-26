@@ -5,15 +5,87 @@
   width: 100%;
   padding: 25px 0;
 
+  @include max(767) {
+    position: fixed;
+    padding: 15px 0;
+    background-color: #f5f5f5;
+    z-index: 10;
+  }
+
   .container {
     display: flex;
     align-items: center;
   }
 }
 
+.header__logo {
+  display: none;
+  flex: none;
+  margin-right: 20px;
+
+  @include max(767) {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.header__burger {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @include max(767) {
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    content: '';
+    transition: all .5s ease;
+    background-color: $brand;
+  }
+
+  &::before {
+    top: 8px;
+    width: 30px;
+  }
+
+  &::after {
+    bottom: 8px;
+    width: 20px;
+  }
+
+  &.active {
+    &::before {
+      top: 14px;
+      width: 20px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 14px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 //begin #MENU
 .menu {
   margin-right: auto;
+
+  @include max(1500) {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -42,6 +114,7 @@
 .header__right {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .header__phone {
@@ -50,11 +123,16 @@
 }
 
 .header__phone-text {
-  font-size: 20px;
   font-weight: bold;
   line-height: 27px;
   white-space: nowrap;
   color: #fff;
+
+  @include responsive-font(20, 18);
+
+  @include max(767) {
+    color: #141414;
+  }
 }
 
 .header__phone-whatsapp {
@@ -65,13 +143,21 @@
     fill: #fff;
     width: 20px;
     height: 20px;
+
+    @include max(767) {
+      fill: $brand;
+    }
   }
 }
 
 .header__btn {
   flex: none;
-  margin-left: 30px;
   min-width: 200px;
+  margin-left: 30px;
+
+  @include max(767) {
+    display: none;
+  }
 
   &:hover {
     color: #fff;
@@ -84,6 +170,10 @@
   align-items: center;
   margin-left: 30px;
   cursor: pointer;
+
+  @include max(767) {
+    display: none;
+  }
 }
 
 .header__sale-icon {

@@ -1,0 +1,23 @@
+//begin target
+.target#target
+  .container
+    .target__inn
+      h2.target__title Открой свой бизнес
+      .target__row
+        span Мы предлагаем удобные пространства на территории ЖК Атмосфера для организации вашего бизнеса.
+        span Площадь коммерческого помещения оснащена личным санузлом, а так же есть возможность рассмотреть двухярусное помещение для огранизации двух этажей или складского помещения.
+      .target__row.target__row--icon
+        .target__icon
+          +svg('size')
+        span Площадь коммерческого помещения от 30 до 120 м<sup>2</sup>.
+      .target__row
+        span
+          strong Оставьте заявку для получения планировок коммерческих помещений
+
+      //begin target__form
+      form.target__form
+        input(placeholder="Ваше имя").target__input
+        input(placeholder="Телефон").target__input
+        button.target__btn.btn Отправить заявку
+      //end target__form
+//end target

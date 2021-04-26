@@ -6,6 +6,11 @@
   width: 50%;
   height: 100%;
   margin: auto;
+  @include max(1024) {
+    position: relative;
+    height: 500px;
+    width: 100%;
+  }
 }
 
 .footer {
@@ -21,14 +26,20 @@
     height: 100%;
     content: '';
     background-color: #4a7755;
+    @include max(1024) {
+      display: none;
+    }
   }
 
   .container {
     z-index: 10;
     pointer-events: none;
+    @include max(1024) {
+
+    background-color: #4a7755;
+    }
   }
 }
-
 
 .footer__left {
   width: 50%;
@@ -36,6 +47,12 @@
   padding-right: 70px;
   padding-bottom: 40px;
   pointer-events: auto;
+  @include max(1024) {
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .footer__title {
@@ -48,10 +65,10 @@
 
 .footer__adress,
 .footer__schedule {
-  font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
   color: #fff;
+  @include responsive-font(20, 17);
 }
 
 .footer__schedule {
@@ -62,6 +79,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  @include max(1260) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .footer__phone {
@@ -71,6 +92,9 @@
   margin-right: 20px;
   white-space: nowrap;
   color: #fff;
+  @include max(1260) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__socials {
@@ -113,6 +137,9 @@
   color: #4a7755;
   border: 2px solid #fff;
   background-color: #fff;
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
 
   &:hover {
     color: #fff;
@@ -124,12 +151,25 @@
   display: flex;
   align-items: center;
   margin-bottom: 95px;
+  @include max(1024) {
+    margin-bottom: 30px;
+  }
+  @include max(374) {
+    flex-direction: column;
+  }
 }
 
 .footer__logo {
   flex: none;
   width: 150px;
   margin-right: 50px;
+  @include max(550) {
+  margin-right: 20px;
+
+  }
+  @include max(374) {
+    margin-bottom: 20px;
+  }
 
   img {
     display: block;
@@ -138,10 +178,13 @@
 }
 
 .footer__descr-text {
-  font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
   color: #fff;
+  @include responsive-font(20, 15);
+  @include max(374) {
+    text-align: center;
+  }
 }
 
 .footer__copyright {

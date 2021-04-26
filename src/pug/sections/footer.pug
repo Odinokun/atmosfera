@@ -1,5 +1,5 @@
 //begin footer
-.footer
+.footer#footer
   #footer-map
   .container
     .footer__left
@@ -17,7 +17,7 @@
             +svg('fb')
           a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer__social.footer__social--youtube
             +svg('youtube')
-      button.footer__btn.btn Оставить заявку
+      button.footer__btn.btn.popup-open(data-popup="popup-callback") Оставить заявку
       .footer__descr
         .footer__logo
           img(src="assets/img/logo-white.svg" alt="picture")

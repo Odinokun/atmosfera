@@ -14,13 +14,31 @@ aside.aside
       .aside__about
         .aside__about-text срок сдачи 1 очереди
         .aside__about-title ноябрь 2022 года
-      .aside__camera
+      .aside__camera.popup-open(data-popup="popup-camera")
         .aside__camera-btn
           svg(width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg')
             path(d='M9.3335 3.66667L12.3688 2.14933C12.4704 2.09856 12.5833 2.07459 12.6968 2.0797C12.8103 2.08481 12.9206 2.11883 13.0172 2.17854C13.1139 2.23824 13.1937 2.32165 13.249 2.42085C13.3044 2.52004 13.3334 2.63174 13.3335 2.74533V7.25467C13.3334 7.36826 13.3044 7.47996 13.249 7.57915C13.1937 7.67835 13.1139 7.76176 13.0172 7.82146C12.9206 7.88117 12.8103 7.91519 12.6968 7.9203C12.5833 7.92541 12.4704 7.90144 12.3688 7.85067L9.3335 6.33333V3.66667ZM2.66683 9H8.00016C8.35378 9 8.69292 8.85952 8.94297 8.60948C9.19302 8.35943 9.3335 8.02029 9.3335 7.66667V2.33333C9.3335 1.97971 9.19302 1.64057 8.94297 1.39052C8.69292 1.14048 8.35378 1 8.00016 1H2.66683C2.31321 1 1.97407 1.14048 1.72402 1.39052C1.47397 1.64057 1.3335 1.97971 1.3335 2.33333V7.66667C1.3335 8.02029 1.47397 8.35943 1.72402 8.60948C1.97407 8.85952 2.31321 9 2.66683 9Z' stroke='#4A7755' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
         .aside__camera-text Life камера
-      button.aside__choice.btn Выбрать квартиру
+      a(href="#choice").aside__choice.btn.scroll-btn Выбрать квартиру
     //end aside__middle
+
+    //begin aside__menu
+    nav.aside__menu.aside-menu
+      ul.aside-menu__list
+        li.aside-menu__item
+          a(href="#about").aside-menu__link.scroll-btn О комплексе
+        li.aside-menu__item
+          a(href="#choice").aside-menu__link.scroll-btn Квартиры
+        li.aside-menu__item
+          a(href="#target").aside-menu__link.scroll-btn Коммерческие помещения
+        li.aside-menu__item
+          a(href="#credit").aside-menu__link.scroll-btn Как купить
+        li.aside-menu__item
+          a(href="#footer").aside-menu__link.scroll-btn Контакты
+    //end aside__menu
+
+    .aside__callback.btn.popup-open(data-popup="popup-callback") Оставить заявку
+
 
     //begin aside-contacts
     .aside__contacts.aside-contacts
@@ -28,7 +46,7 @@ aside.aside
         .aside-contacts__phone-text +7 700 007 70 70
         .aside-contacts__phone-whatsapp
           +svg('whatsapp')
-      .aside-contacts__sale
+      .aside-contacts__sale.popup-open(data-popup="popup-sale")
         .aside-contacts__sale-icon
           +svg('sale')
         .aside-contacts__sale-text Отдел продаж

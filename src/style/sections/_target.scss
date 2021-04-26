@@ -1,0 +1,149 @@
+.target {
+  .container {
+    padding-top: 100px;
+
+    @include max(1024) {
+      padding-top: 40px;
+    }
+  }
+}
+
+.target__inn {
+  padding: 75px 90px;
+  border: 10px solid $brand;
+
+  @include max(1024) {
+    padding: 20px;
+  }
+}
+
+.target__title {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 55px;
+  color: #141414;
+
+  @include responsive-font(50, 30);
+  @include max(1024) {
+    margin-bottom: 20px;
+  }
+}
+
+.target__row {
+  margin-bottom: 30px;
+
+  span {
+    font-weight: 300;
+    line-height: 1.5;
+    display: block;
+    color: #646464;
+
+    @include responsive-font(20, 17);
+
+    strong {
+      font-weight: 600;
+      color: #141414;
+    }
+  }
+}
+
+.target__row--icon {
+  display: flex;
+}
+
+.target__icon {
+  position: relative;
+  transform: translateY(3px);
+
+  svg {
+    flex: none;
+    fill: $brand;
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+  }
+}
+
+.target__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 13px;
+
+  @include max(1024) {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: -20px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 130px;
+  }
+}
+
+.target__input,
+.target__btn {
+  width: calc(33.33% - 30px);
+
+  @include max(1024) {
+    width: 100%;
+  }
+}
+
+.target__input {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+  height: 50px;
+  padding: 5px 20px;
+  text-align: center;
+  color: #141414;
+  border: none;
+  background-color: #f0f0f0;
+  box-shadow: none;
+
+  @include placeholder-color(#969696);
+  @include max(1024) {
+    margin-bottom: 20px;
+  }
+}
+
+.target__btn {
+  position: relative;
+
+  @include max(1024) {
+    position: static;
+  }
+
+  &:hover {
+    color: #fff;
+    border: 2px solid #689573;
+    background-color: #689573;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 166px;
+    height: 176px;
+    margin: auto;
+    content: '';
+    background-image: url('../img/squirrel.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+    @include max(1024) {
+      top: 0;
+      bottom: auto;
+      left: auto;
+    }
+  }
+}

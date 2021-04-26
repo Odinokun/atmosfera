@@ -15,6 +15,7 @@ html {
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   color: #141414;
+
 }
 
 body {
@@ -53,22 +54,6 @@ ul {
   }
 }
 
-//ul {
-//  li {
-//    // путь к кастомной картинке пункта ul
-//    // list-style-image: url('../img/ul.png');
-//  }
-//}
-//
-////кастомные пункты списка с цифрами
-//ol {
-//  // list-style: none;
-//  // @include counter(li);
-//  li::before {
-//    // color: $brand;
-//  }
-//}
-
 input,
 textarea,
 select,
@@ -76,14 +61,6 @@ button {
   border-radius: 0 !important;
   outline: none;
 }
-
-//input {
-//  padding: 3px 10px 5px 10px;
-//  color: $text;
-//  border: 1px solid $text;
-//
-//  @include placeholder-color($text);
-//}
 
 textarea {
   resize: none;
@@ -108,7 +85,7 @@ svg {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  @include max(1023) {
+  @include max(1024) {
     //свойство для исправления бага 100vh для мобильных
     min-height: -moz-available;
     min-height: -webkit-fill-available;
@@ -127,14 +104,25 @@ svg {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 110px;
+
+  @include max(767) {
+    padding: 0 20px;
+  }
 }
 
 .container--350 {
   max-width: 1920px;
   padding: 0 30px 0 350px;
+
+  @include max(1700) {
+    padding: 0 30px 0 110px;
+  }
+  @include max(767) {
+    padding: 0 20px;
+  }
 }
 
 .btn {
@@ -163,4 +151,25 @@ svg {
     color: #4a7755;
     background-color: transparent;
   }
+}
+
+.filter__title,
+.filter__subtitle,
+.filter__text-left,
+.filter__text-right,
+.filter__clock,
+.trees__title,
+.trees__icon,
+.trees__descr,
+.trees__item,
+.gallery__title,
+.gallery__text-left,
+.gallery__text-right,
+.gallery-item {
+  //opacity: 0;
+}
+.animate__fadeInUp{
+  animation-duration: 1s;
+  animation-delay: .2s;
+
 }

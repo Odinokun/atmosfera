@@ -3,6 +3,10 @@
   z-index: 1;
   padding: 120px 0 90px 0;
   background-color: #fff;
+
+  @include max(1024) {
+    padding: 40px 0 0 0;
+  }
 }
 
 .about__video {
@@ -11,6 +15,10 @@
   right: 0;
   width: 50%;
   height: 100%;
+
+  @include max(1024) {
+    display: none;
+  }
 
   &::before {
     position: absolute;
@@ -33,11 +41,15 @@
 }
 
 .about__title {
-  font-size: 50px;
   font-weight: 600;
   line-height: 68px;
   margin-bottom: 48px;
   color: #141414;
+
+  @include responsive-font(50, 30);
+  @include max(1024) {
+    margin-bottom: 20px;
+  }
 }
 
 .about-tabs {
@@ -45,11 +57,17 @@
 }
 
 .about-tabs__header {
+  overflow: hidden;
+}
+
+.about-tabs__header-inn {
+  position: relative;
   display: inline-flex;
+  overflow: auto;
   align-items: center;
+  width: 100%;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .about-tabs__link {
@@ -57,7 +75,7 @@
   font-weight: 400;
   line-height: 38px;
   position: relative;
-  margin-right: 38px;
+  padding-right: 38px;
   padding-bottom: 24px;
   cursor: pointer;
   user-select: none;
@@ -65,15 +83,29 @@
   white-space: nowrap;
   color: #c8c8c8;
 
+  @include max(1440) {
+    font-size: 22px;
+  }
+  @include max(1200) {
+    font-size: 20px;
+  }
+
   &:last-child {
-    margin-right: 0;
+    padding-right: 0;
+
+    &.active,
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
   }
 
   &:hover {
     color: #4a7755;
 
     &::before {
-      width: 100%;
+      width: calc(100% - 38px);
     }
   }
 
@@ -83,19 +115,30 @@
     color: #4a7755;
 
     &::before {
-      width: 100%;
+      width: calc(100% - 38px);
     }
   }
 
   &::before {
     position: absolute;
-    bottom: -2px;
+    z-index: 1;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 3px;
     content: '';
     transition: .5s ease-in-out;
     background-color: #4a7755;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #e6e6e6;
   }
 }
 
@@ -111,18 +154,28 @@
   display: flex;
   padding-top: 74px;
 
+  @include max(1024) {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
   p {
-    font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 30px;
     color: #646464;
+
+    @include responsive-font(20, 17);
   }
 }
 
 .about-tabs__item-text,
 .about-tabs__item-pic {
   width: 50%;
+
+  @include max(1024) {
+    width: 100%;
+  }
 
   img {
     max-width: 100%;
@@ -133,12 +186,39 @@
   min-width: 220px;
   margin-top: 46px;
   margin-bottom: 30px;
+
+  @include max(1024) {
+    margin-top: 20px;
+  }
 }
 
 .about-tabs__item-pic {
   transform: translateY(50%);
 
+  @include max(1024) {
+    width: 100%;
+    height: 300px;
+    margin-bottom: -150px;
+    transform: translateY(0);
+  }
+  @include max(768) {
+    height: 200px;
+    margin-bottom: -100px;
+  }
+
   img {
     transform: translateY(80px);
+
+    @include max(1200) {
+      transform: translateY(150px);
+    }
+    @include max(1024) {
+      width: 100%;
+      height: 100%;
+      transform: translateY(0);
+
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }

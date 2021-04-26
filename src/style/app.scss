@@ -4,8 +4,7 @@
 @import 'core/base';
 
 //elements
-//@import 'elements/burger';
-//@import 'elements/popup';
+@import 'elements/popup';
 @import 'elements/slickBase';
 
 //section
@@ -19,6 +18,9 @@
 @import 'sections/footer';
 @import 'sections/trees';
 @import 'sections/credit';
+@import 'sections/target';
+@import 'sections/gallery';
+@import 'sections/preloader';
 
 //pages
 @import 'pages/index';
