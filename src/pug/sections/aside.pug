@@ -39,12 +39,11 @@ aside.aside
 
     .aside__callback.btn.popup-open(data-popup="popup-callback") Оставить заявку
 
-
     //begin aside-contacts
     .aside__contacts.aside-contacts
-      a(href="tel:+77000077070").aside-contacts__phone
-        .aside-contacts__phone-text +7 700 007 70 70
-        .aside-contacts__phone-whatsapp
+      .aside-contacts__phone
+        a(href="tel:+77000077070").aside-contacts__phone-text +7 700 007 70 70
+        a(href='https://api.whatsapp.com/send?phone=77000077070', rel='nofollow', target='_blank').aside-contacts__phone-whatsapp
           +svg('whatsapp')
       .aside-contacts__sale.popup-open(data-popup="popup-sale")
         .aside-contacts__sale-icon

@@ -15,7 +15,6 @@ html {
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   color: #141414;
-
 }
 
 body {
@@ -153,23 +152,7 @@ svg {
   }
 }
 
-.filter__title,
-.filter__subtitle,
-.filter__text-left,
-.filter__text-right,
-.filter__clock,
-.trees__title,
-.trees__icon,
-.trees__descr,
-.trees__item,
-.gallery__title,
-.gallery__text-left,
-.gallery__text-right,
-.gallery-item {
-  //opacity: 0;
-}
-.animate__fadeInUp{
+.animate__fadeInUp {
   animation-duration: 1s;
   animation-delay: .2s;
-
 }

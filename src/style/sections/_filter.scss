@@ -161,6 +161,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  @include max(767) {
+    margin-bottom: 20px;
+  }
 }
 
 .filter__btn {
@@ -168,6 +171,12 @@
   margin-bottom: 20px;
   color: #4a7755;
   background-color: transparent;
+  @include max(767) {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   &.active,
   &:hover {
@@ -183,5 +192,8 @@
 
   @include max(1024) {
     margin-bottom: 40px;
+  }
+  @include max(767) {
+    height: 400px;
   }
 }

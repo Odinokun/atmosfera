@@ -4,7 +4,7 @@ module.exports = function() {
   $(function() {
     $('.scroll-btn[href*=\\#]').on("click", function(e){
        // e.preventDefault();
-      $('.aside__desktop, .aside__bg, .header__burger').toggleClass('active');
+      $('.aside__desktop, .aside__bg, .header__burger').removeClass('active');
       let anchor = $(this);
 
        $('html, body').stop().animate({

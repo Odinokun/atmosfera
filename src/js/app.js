@@ -5,6 +5,7 @@ $(function() {
 
   // begin no-JS
   require('./modules/noJs')();
+  require('./modules/header-bg')();
   require('./modules/aside')();
   require('./modules/tabs')();
   require('./modules/scroll2ancor')();

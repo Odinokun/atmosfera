@@ -12,9 +12,10 @@ mixin about-tabs__item(pic)
 
 //begin about
 section.about#about
-  .about__video
-    video(autoplay muted loop preload='auto')
-      source(type="video/mp4" src='assets/video/woodpecker.mp4')
+  .about__video-wrap
+    .about__video
+      video(autoplay muted loop preload='auto')
+        source(type="video/mp4" src='assets/video/woodpecker.mp4')
 
   .container.container--350
     h2.about__title Атмосфера — это

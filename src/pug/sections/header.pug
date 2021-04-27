@@ -23,9 +23,9 @@ header.header
 
     //begin header__right
     .header__right
-      a(href="tel:+77000077070").header__phone
-        .header__phone-text +7 700 007 70 70
-        .header__phone-whatsapp
+      .header__phone
+        a(href="tel:+77000077070").header__phone-text +7 700 007 70 70
+        a(href='https://api.whatsapp.com/send?phone=77000077070', rel='nofollow', target='_blank').header__phone-whatsapp
           +svg('whatsapp')
 
       .header__btn.btn.popup-open(data-popup="popup-callback") Оставить заявку

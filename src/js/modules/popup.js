@@ -4,7 +4,7 @@ module.exports = function() {
   $('.popup-open').on('click', function(e) {
     e.preventDefault();
 
-    $('.aside__desktop, .aside__bg, .header__burger').toggleClass('active');
+    // $('.aside__desktop, .aside__bg, .header__burger').removeClass('active');
 
     let targetPopup = '#' + $(this).data('popup');
     $(targetPopup + ', #popup__bg').fadeIn();

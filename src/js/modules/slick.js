@@ -15,7 +15,7 @@ module.exports = function() {
     arrows: true,
     infinite: true,
     autoplay: false,
-    fade: true,
+    fade: false,
     prevArrow: "<div class='prev'><svg viewBox=\"0 0 11 11\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 10L1.75736 5.75736L6 1.51472\"/></svg></div>",
     nextArrow: "<div class='next'><svg viewBox=\"0 0 11 11\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5 1L9.24264 5.24264L5 9.48528\"/></svg></div>",
 

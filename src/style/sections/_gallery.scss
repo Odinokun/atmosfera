@@ -169,15 +169,15 @@
 
   .gallery-item__slider {
     width: 100%;
-  }
-
-  .gallery-item__slide {
-    height: 600px;
     margin-bottom: 60px;
 
     @include max(1024) {
       margin-bottom: 50px;
     }
+  }
+
+  .gallery-item__slide {
+    height: 600px;
   }
 
   .gallery-item__descr {
@@ -237,6 +237,10 @@
 }
 
 .gallery__item--04 {
+  @include max(767) {
+    display: none;
+  }
+
   .gallery-item__slider {
     width: 100%;
     max-width: 480px;
