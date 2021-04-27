@@ -10,7 +10,7 @@ mixin slide
 
       //begin choice__body
       .choice__body
-        .choice__floor-btns
+        //.choice__floor-btns
           .choice__floor-btns-title этаж
           button.choice__floor-btn.btn 4 <span>этаж</span>
           button.choice__floor-btn.btn 3 <span>этаж</span>
@@ -99,7 +99,15 @@ mixin slide
         +svg('eye')
         span Интерактивный поиск
 
-    .choice__slider#choice__slider
-      +slide
-      +slide
+    .choice__slider-wrap
+      .choice__slider#choice__slider
+        +slide
+        +slide
+
+      .choice__floor-btns
+        .choice__floor-btns-title этаж
+        button.choice__floor-btn.btn 4 <span>этаж</span>
+        button.choice__floor-btn.btn 3 <span>этаж</span>
+        button.choice__floor-btn.btn 2 <span>этаж</span>
+        button.choice__floor-btn.btn.active 1 <span>этаж</span>
 //end choice

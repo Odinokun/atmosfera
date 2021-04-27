@@ -8,10 +8,13 @@
 
 .filter__title {
   font-weight: 600;
-  line-height: 68px;
+  line-height: 1.5;
   color: #141414;
 
   @include responsive-font(50, 30);
+  @include max(767) {
+    line-height: 1.3;
+  }
 }
 
 .filter__subtitle {

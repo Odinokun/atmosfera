@@ -3,7 +3,7 @@
   background-image: url('../img/bg-choice.png');
   background-repeat: no-repeat;
   background-position: 100% 0;
-  background-size: contain;
+  //background-size: contain;
 
   .container {
     position: relative;
@@ -64,6 +64,14 @@
     width: 23px;
     height: 16px;
     margin-right: 18px;
+  }
+}
+
+.choice__slider-wrap {
+  position: relative;
+  @include max(767) {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
@@ -258,32 +266,50 @@
 
 //begin #body
 .choice__body {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding-left: 170px;
 
   @include max(1440) {
     width: 100%;
     margin-top: 30px;
   }
-  @include max(410) {
+  @include max(480) {
     display: none;
   }
 }
 
 .choice__floor-btns {
+  position: absolute;
+  top: 100px;
+  left: 0;
   display: flex;
   flex: none;
   flex-direction: column;
   width: 100px;
-  margin-right: 70px;
 
+  @include max(1440) {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-bottom: 80px;
+    transform: translateX(-250px);
+  }
+  @include max(840) {
+    right: auto;
+    left: 0;
+    margin: 0 0 80px 0;
+    transform: translateX(0);
+  }
   @include max(767) {
-    margin-right: 0;
-    padding-top: 15px;
+    margin: 0;
   }
   @include max(480) {
-    width: 70px;
+    display: none;
   }
 }
 
@@ -310,7 +336,7 @@
 .choice__floor-btn {
   margin-bottom: 10px;
   color: #4a7755;
-  background-color: transparent;
+  background-color: #fff;
 
   @include max(480) {
     width: 50px;
