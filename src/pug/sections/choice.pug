@@ -2,15 +2,9 @@ mixin slide
   .choice__slider-item
     //begin choice__left
     .choice__left
-      .choice__type-btns
-        button.choice__type-btn.btn.active Студия
-        button.choice__type-btn.btn 1 ком<span>ната</span><span>.</span>
-        button.choice__type-btn.btn 2 ком<span>наты</span><span>.</span>
-        button.choice__type-btn.btn 3 ком<span>наты</span><span>.</span>
-
       //begin choice__body
       .choice__body
-        //.choice__floor-btns
+        .choice__floor-btns
           .choice__floor-btns-title этаж
           button.choice__floor-btn.btn 4 <span>этаж</span>
           button.choice__floor-btn.btn 3 <span>этаж</span>
@@ -27,10 +21,10 @@ mixin slide
             path(d='M164.441 200.564H124.513V231H164.441V200.564Z' fill='white' stroke='#C8C8C8')
             path(d='M181.316 23.9397V32.189H204.106V59.7619H218.984V5.52015H204.106V1H177.361V15.6905H185.573V23.9397H181.316Z' fill='white' stroke='#C8C8C8')
             path(d='M164.177 23.9397V1H137.433V5.52015H122.554V59.7619H137.433V32.189H152.764V23.9397H164.177Z' fill='white' stroke='#C8C8C8')
-            path(class="free" d='M164.177 32.189H137.433V62.6246H164.177V32.189Z' fill='#FFFFFF' stroke='#C8C8C8')
+            path(id="Свободно" class="free" d='M164.177 32.189H137.433V62.6246H164.177V32.189Z' fill='#FFFFFF' stroke='#C8C8C8')
             path(d='M204.106 32.189H177.361V62.6246H204.106V32.189Z' fill='#FFFFFF' stroke='#C8C8C8')
             path(d='M181.315 32.189V23.9397H185.572V15.6905H177.36V1H164.177V23.9397H152.763V32.189H164.177V62.587H177.36V32.189H181.315Z' fill='#F7FBF8' stroke='#C8C8C8')
-            path(class="sold" d='M30.2002 200.557L30.2002 173.812H1.00758L1.00758 200.557H30.2002Z' fill='#FFFFFF' stroke='#C8C8C8')
+            path(id="Продано" class="sold" d='M30.2002 200.557L30.2002 173.812H1.00758L1.00758 200.557H30.2002Z' fill='#FFFFFF' stroke='#C8C8C8')
             path(d='M30.1926 200.565H4.95508V228.175H30.1926V200.565Z' fill='#F7FBF8' stroke='#C8C8C8')
             path(d='M50.1564 200.565H30.1924V228.175H50.1564V200.565Z' fill='#F7FBF8' stroke='#C8C8C8')
             path(d='M50.1559 228.137H78.1808V180.601H63.4904V184.97H46.3892V192.918H50.1559V228.137Z' fill='#F7FBF8' stroke='#C8C8C8')
@@ -38,7 +32,7 @@ mixin slide
             path(d='M38.4793 166.55H30.1924V173.82V192.918H46.3896V184.97H63.4908V180.6V164.027H38.4793V166.55Z' fill='#F7FBF8' stroke='#C8C8C8')
             path(d='M32.2267 141.803V133.29H1V173.82H30.1926V166.551V141.803H32.2267Z' fill='white' stroke='#C8C8C8')
             path(d='M32.2264 133.29V141.803H30.1924V166.551H38.4793V164.027H63.4908V133.29H32.2264Z' fill='white' stroke='#C8C8C8')
-            path(class="free" d='M271.667 33.1166V59.8608H300.86V33.1166H271.667Z' fill='#FFFFFF' stroke='#C8C8C8')
+            path(id="Свободно" class="free" d='M271.667 33.1166V59.8608H300.86V33.1166H271.667Z' fill='#FFFFFF' stroke='#C8C8C8')
             path(d='M271.644 5.52026H251.68V33.1308H271.644H296.881V5.52026H271.644Z' fill='white' stroke='#C8C8C8')
             path(d='M255.446 40.7397V48.6877H238.383V53.0571H223.692V5.52026H251.68V33.1308H260.23V40.7397H255.446Z' fill='white' stroke='#C8C8C8')
             path(d='M271.644 33.1309H260.23V40.7398H255.446V48.6877H238.383V53.0572V69.631H263.357V67.1073H271.644V59.8751V46.503V33.1309Z' fill='#F7FBF8' stroke='#C8C8C8')
@@ -56,10 +50,11 @@ mixin slide
             path(d='M1 128.581H63.491V115.209H37.9899V101.762H30.1926V109.672H18.1389V101.762H1V128.581Z' fill='white' stroke='#C8C8C8')
             path(d='M38.1467 115.165H67.6406V74.258H38.1467V115.165Z' fill='white' stroke='#C8C8C8')
             path(d='M1 101.762H18.1389V109.672H30.1926V74.2642H1V101.762Z' fill='white' stroke='#C8C8C8')
-            path(class="sold" d='M1.01588 74.2734H30.2085L30.2085 47.3786H1.01588L1.01588 74.2734Z' fill='#FFFFFF' stroke='#C8C8C8')
+            path(id="Продано" class="sold" d='M1.01588 74.2734H30.2085L30.2085 47.3786H1.01588L1.01588 74.2734Z' fill='#FFFFFF' stroke='#C8C8C8')
             path(d='M38.1026 74.2641H67.6343V60.327H46.3896V52.0401H38.1026V40.6267H30.1924V74.2641V101.762H37.9896L38.1026 74.2641Z' fill='#F7FBF8' stroke='#C8C8C8')
             path(d='M38.1026 28.0456V19.3066H67.6343V33.1308V60.327H46.3896V52.04H38.1026V40.6267H30.1924V28.0456H38.1026Z' fill='white' stroke='#C8C8C8')
             path(d='M30.1926 40.6275V28.0464H38.1029V19.3074H63.265L63.491 18.8931V5.521H38.1029H34.1477H30.1926H4.84212V19.3074H1V33.1316V47.37H30.1926V40.6275Z' fill='white' stroke='#C8C8C8')
+          //.description.active
         //end choice__floor
       //end choice__body
 
@@ -79,7 +74,7 @@ mixin slide
             span Скачать PDF
 
         .choice__flat-links
-          button.choice__flat-link-btn.btn Забронировать
+          button.choice__flat-link-btn.btn.popup-open(data-popup="popup-callback") Забронировать
           a(href="#credit").choice__flat-link-question.scroll-btn
             +svg('question')
             span Как купить
@@ -103,11 +98,9 @@ mixin slide
       .choice__slider#choice__slider
         +slide
         +slide
-
-      .choice__floor-btns
-        .choice__floor-btns-title этаж
-        button.choice__floor-btn.btn 4 <span>этаж</span>
-        button.choice__floor-btn.btn 3 <span>этаж</span>
-        button.choice__floor-btn.btn 2 <span>этаж</span>
-        button.choice__floor-btn.btn.active 1 <span>этаж</span>
+      .choice__type-btns
+        button.choice__type-btn.btn.active Студия
+        button.choice__type-btn.btn 1 ком<span>ната</span><span>.</span>
+        button.choice__type-btn.btn 2 ком<span>наты</span><span>.</span>
+        button.choice__type-btn.btn 3 ком<span>наты</span><span>.</span>
 //end choice

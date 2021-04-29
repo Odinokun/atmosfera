@@ -69,6 +69,7 @@
 
 .choice__slider-wrap {
   position: relative;
+
   @include max(767) {
     max-width: 600px;
     margin: 0 auto;
@@ -189,10 +190,13 @@
 }
 
 .choice__left {
+  padding-top: 80px;
+
   @include max(1440) {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
+    padding-top: 0;
   }
 }
 
@@ -204,12 +208,14 @@
 
 
 .choice__type-btns {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 50%;
   margin-bottom: 30px;
 
   @include max(1440) {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -270,7 +276,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding-left: 170px;
 
   @include max(1440) {
     width: 100%;
@@ -282,32 +287,11 @@
 }
 
 .choice__floor-btns {
-  position: absolute;
-  top: 100px;
-  left: 0;
   display: flex;
   flex: none;
   flex-direction: column;
   width: 100px;
 
-  @include max(1440) {
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    margin-bottom: 80px;
-    transform: translateX(-250px);
-  }
-  @include max(840) {
-    right: auto;
-    left: 0;
-    margin: 0 0 80px 0;
-    transform: translateX(0);
-  }
-  @include max(767) {
-    margin: 0;
-  }
   @include max(480) {
     display: none;
   }
@@ -402,14 +386,9 @@
 
       &.sold {
         fill: #d5ecdb;
-
-        &:hover {
-          fill: #d5ecdb;
-        }
       }
 
-      &.free,
-      &:hover {
+      &.free {
         fill: #4a7755;
       }
     }
@@ -563,4 +542,40 @@
 .choice__right {
   min-height: 400px;
   border: 2px solid $brand;
+}
+
+.tooltip {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 30px;
+  position: absolute;
+  z-index: 5;
+  display: none;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 15px 30px 15px;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  color: #141414;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 0 1px #eee;
+
+
+  &.active {
+    display: block;
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 5px solid white;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
 }

@@ -13,6 +13,7 @@ $(function() {
   require('./modules/popup')();
   require('./modules/count')();
   require('./modules/preloader')();
+  require('./modules/tooltips')();
 
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
   require('./modules/waypoints')();
