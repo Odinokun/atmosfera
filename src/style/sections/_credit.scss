@@ -102,6 +102,36 @@
   margin-right: 20px;
   padding: 30px 26px;
   background-color: #fff;
+
+  ul {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.67;
+    position: relative;
+    padding-left: 20px;
+    color: #646464;
+
+    strong {
+      font-weight: bold;
+    }
+
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+      background-color: $brand;
+    }
+  }
 }
 
 .credit-slide__title {
@@ -122,36 +152,6 @@
   text-align: center;
   color: #4a7755;
   background-color: #d5ecdb;
-}
-
-.credit-slide__list {
-  margin: 0 0 30px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.credit-slide__item {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.67;
-  position: relative;
-  padding-left: 20px;
-  color: #646464;
-
-  strong {
-    font-weight: bold;
-  }
-
-  &::before {
-    position: absolute;
-    top: 9px;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    content: '';
-    border-radius: 50%;
-    background-color: $brand;
-  }
 }
 
 .credit-slide__btn {

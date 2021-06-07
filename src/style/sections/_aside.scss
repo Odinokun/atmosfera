@@ -64,7 +64,7 @@
   &.active {
     transform: translateX(0);
 
-    @include max(1700) {
+    @include max(1024) {
       transform: translateX(-320px);
     }
 

@@ -22,7 +22,7 @@ module.exports = function () {
   });
 
   function floatAside() {
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > 50) {
       $('.aside__desktop').removeClass('active');
     } else {
       $('.aside__desktop').addClass('active');

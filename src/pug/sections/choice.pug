@@ -90,7 +90,12 @@ mixin slide
   .container
     .choice__header
       h2.choice__title Выбери свою квартиру
-      button.choice__interactive-btn.btn
+      .choice__type-btns
+        button.choice__type-btn.btn.active Студия
+        button.choice__type-btn.btn 1 ком<span>ната</span><span>.</span>
+        button.choice__type-btn.btn 2 ком<span>наты</span><span>.</span>
+        button.choice__type-btn.btn 3 ком<span>наты</span><span>.</span>
+      //-button.choice__interactive-btn.btn
         +svg('eye')
         span Интерактивный поиск
 
@@ -98,9 +103,4 @@ mixin slide
       .choice__slider#choice__slider
         +slide
         +slide
-      .choice__type-btns
-        button.choice__type-btn.btn.active Студия
-        button.choice__type-btn.btn 1 ком<span>ната</span><span>.</span>
-        button.choice__type-btn.btn 2 ком<span>наты</span><span>.</span>
-        button.choice__type-btn.btn 3 ком<span>наты</span><span>.</span>
 //end choice
