@@ -20,17 +20,12 @@
 }
 
 .choice__header {
-  //display: flex;
-  //align-items: center;
-  //justify-content: space-between;
-  //margin-bottom: 80px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   @include max(1440) {
-    //margin-bottom: 30px;
     flex-direction: column;
   }
 }
@@ -44,25 +39,12 @@
 }
 
 .choice__type-btns {
-  //position: absolute;
-  //z-index: 1;
-  //top: 0;
-  //left: 0;
-  //width: 50%;
-  //margin-bottom: 30px;
   display: flex;
   flex: none;
   justify-content: flex-end;
-
-  //@include max(1440) {
-  //  display: flex;
-  //  justify-content: center;
-  //  width: 100%;
-  //}
 }
 
 .choice__type-btn {
-  //margin-bottom: 20px;
   margin-top: 10px;
   margin-right: 20px;
   color: #4a7755;
@@ -110,34 +92,6 @@
   }
 }
 
-//.choice__interactive-btn {
-//  padding-right: 40px;
-//  padding-left: 40px;
-//
-//  @include max(767) {
-//    position: absolute;
-//    right: 0;
-//    bottom: 30px;
-//    left: 0;
-//    width: 280px;
-//    max-width: 100%;
-//    margin: auto;
-//  }
-//
-//  &:hover {
-//    color: #fff;
-//    background-color: #4a7755;
-//  }
-//
-//  svg {
-//    flex: none;
-//    fill: #fff;
-//    width: 23px;
-//    height: 16px;
-//    margin-right: 18px;
-//  }
-//}
-
 .choice__slider-wrap {
   position: relative;
 
@@ -167,17 +121,11 @@
     border-radius: 50%;
     background-color: #fff;
 
-    @include max(1700) {
-      top: auto;
-      bottom: -110px;
-      transform: translateY(0);
-    }
     @include max(1440) {
-      top: 160px;
+      top: 200px;
       bottom: auto;
     }
     @include max(767) {
-      top: 180px;
       width: 50px;
       height: 50px;
     }
@@ -205,10 +153,10 @@
     left: -115px;
 
     @include max(1700) {
-      left: calc(50% - 100px);
+      left: -30px;
     }
-    @include max(1440) {
-      left: 0;
+    @include max(767) {
+      left: -10px;
     }
 
     svg {
@@ -220,10 +168,10 @@
     right: -115px;
 
     @include max(1700) {
-      right: calc(50% - 100px);
+      right: -30px;
     }
-    @include max(1440) {
-      right: 0;
+    @include max(767) {
+      right: -10px;
     }
 
     svg {
@@ -236,11 +184,19 @@
   display: flex !important;
   justify-content: space-between;
 
+  @include max(1700) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
   @include max(1440) {
     position: relative;
     align-items: center;
     flex-direction: column-reverse;
     padding-top: 0;
+  }
+  @include max(767) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -457,7 +413,7 @@
       text-transform: lowercase;
       color: #141414;
 
-      @include responsive-font(30, 27);
+      @include responsive-font(30, 24);
 
       sup {
         font-size: 18px;
@@ -543,6 +499,12 @@
 .choice__right {
   min-height: 400px;
   //border: 2px solid $brand;
+
+  @include max(767) {
+    width: calc(100% - 40px);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .tooltip {
@@ -584,6 +546,10 @@
 //begin #стили для виджета
 .choice__right .pp-app {
   background-color: transparent !important;
+}
+
+.pp-nav-arrow {
+  display: none !important;
 }
 
 .choice__right .pp-nav-arrow svg,
@@ -638,5 +604,8 @@
   background-color: #4a7755 !important;
 }
 
+.choice__right #pp-app-container {
+  min-height: 400px;
+}
 
 //end #стили для виджета
