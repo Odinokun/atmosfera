@@ -184,19 +184,10 @@
   display: flex !important;
   justify-content: space-between;
 
-  @include max(1700) {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
   @include max(1440) {
     position: relative;
     align-items: center;
     flex-direction: column-reverse;
-    padding-top: 0;
-  }
-  @include max(767) {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
